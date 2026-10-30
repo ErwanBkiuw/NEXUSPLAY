@@ -1,0 +1,9 @@
+﻿.env
+.env.*
+!.env.example
+src-tauri/target/
+src-tauri/gen/
+node_modules/
+dist/
+*.key
+*.sig

@@ -1,0 +1,17 @@
+
+import { createClient } from "@supabase/supabase-js";
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+
+if (!supabaseUrl || !supabaseKey) {
+  throw new Error(
+    "Configuration Supabase manquante. Vérifie le fichier .env à la racine du projet."
+  );
+}
+
+export const supabase = createClient(
+  supabaseUrl,
+  supabaseKey
+);
+
